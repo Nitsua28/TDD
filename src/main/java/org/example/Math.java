@@ -1,5 +1,4 @@
 package org.example;
-
 public class Math {
 
     /**
@@ -9,6 +8,15 @@ public class Math {
      * @return - the greatest common factor between x and y
      */
     public int GCF(int x, int y) {
+        int i = 0;
+        if (x > y) i = x;
+        else i = y;
+
+        for (i = i; i > 1; i--){
+            if (x % i == 0 && y % i == 0){
+                return i;
+            }
+        }
         return -1;
     }
 
@@ -19,7 +27,8 @@ public class Math {
      * @return the area of the rectangle
      */
     public int areaRectangle(int length, int width) {
-        return -1;
+
+        return length * width;
     }
 
     /**
@@ -29,7 +38,8 @@ public class Math {
      * @return - the area of the triangle
      */
     public double areaTriangle(int base, int height) {
-        return -1;
+
+        return (base * height) / 2;
     }
 
     /**
@@ -38,7 +48,8 @@ public class Math {
      * @return - the area of the circle
      */
     public double areaCircle(int radius) {
-        return -1;
+
+        return 3.14159265359 * (radius * radius);
     }
 
     /**
@@ -47,8 +58,11 @@ public class Math {
      * @return - the factorial of number
      */
     public int factorial(int number) {
-        return -1;
+        int factorial = 1;
+        for (int i = number; i > 0; i --) factorial *= i;
+        return factorial;
     }
+
 
 
 
